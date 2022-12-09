@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=Viaoda+Libre');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400;1,700');
+@import url('https://fonts.googleapis.com/css2?family=Nabla&display=swap');
+
+/* General CSS */
+
+body {
+    /*
+    CSS Variables
+    The default theme here is Dark.
+    */
+    --dark-color: rgb(46, 46, 46);
+    --light-color: rgb(238, 238, 238);
+    --medium-color: rgb(142, 142, 142);
+    --background-color: var(--dark-color);
+    --font-color: var(--light-color);
+    --badgeNew-color: rgb(83, 83, 83);
+    --card-color: rgba(83, 83, 83, 0.25);
+    --button-color: var(--light-color);
+    --button-text-color: var(--dark-color);
+    --button-border-color: var(--medium-color);
+    --title-font: "Viaoda Libre", serif;
+
+    --rainbow-current: #f88;
+
+    background-color: var(--background-color);
+    color: var(--font-color);
+    font-family: Lato, sans-serif;
+    font-size: 18px;
+}
+
+p {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    line-height: 1.25em;
+}
+
+a {
+    color: var(--font-color)
+}
+
+header {
+    text-align: center;
+}
+
+header h1 {
+    font-family: var(--title-font);
+    margin: 1rem;
+    font-size: 3em;
+}
+
+main, footer {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+footer {
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--font-color);
+    padding-bottom: 2rem;
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+    margin-top: 2rem;
+    border-bottom: 1px solid var(--font-color);
+    padding-bottom: 0.5rem;
+}
+
+/* Badges */
+
+.badge {
+    border-radius: 4px;
+    padding: 0.5em;
+    vertical-align: middle;
+    font-variant: small-caps;
+    font-weight: bold;
+    font-size: 0.5em;
+}
+
+.badgeNew {
+    background-color: var(--badgeNew-color);
+    color: var(--light-color);
+}
+
+/* Notecards */
+
+.notecardHeading {
+    background-color: var(--card-color);
+    padding: 0.25rem;
+    text-align: center;
+    border-radius: 4px 4px 0 0;
+    border: 1px solid var(--font-color);
+    font-variant: small-caps;
+    font-weight: bold;
+    margin-top: 14px;
+}
+
+.notecardContent {
+    background-color: var(--card-color);
+    padding: 1rem;
+    border-radius: 0 0 4px 4px;
+    border: 1px solid var(--font-color);
+    border-top-width: 0;
+}
+
+.notecardContent p:first-of-type {
+    margin-top: 0;
+}
+
+.notecardContent p:last-of-type {
+    margin-bottom: 0;
+}
+
+/* Themer */
+
+#themer {
+    padding: 1rem;
+    background-color: var(--card-color);
+    border-radius: 4px;
+    border: 1px solid var(--font-color);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: none;
+    gap: 0.2rem;
+    transition: height 1s ease;
+}
+
+.themerClosed {
+    grid-template-columns: none !important;
+    grid-template-rows: none !important;
+}
+
+button {
+    background-color: var(--button-color);
+    color: var(--button-text-color);
+    border-radius: 4px;
+    font-variant: small-caps;
+    font-size: 0.83em;
+    border-style: outset;
+    border-color: var(--button-border-color);
+}
+
+button:active {
+    border-style: inset;
+}
+
+.themerClosed button {
+    display: none;
+}
+
+.themerClosed .alwaysButton {
+    display: unset;
+}
+
+.alwaysButton {
+    grid-column: 1 / -1;
+}
+
+
+
+@media screen and (min-width: 500px) {
+    /* General CSS */
+
+    header h1 {
+        font-size: 3.25em;
+    }
+
+    /* Themer */
+
+    #themer {
+        position: fixed;
+        top: 0;
+        right: 0;
+        padding: 1rem;
+        background-color: var(--card-color);
+        border-radius: 0 0 0 4px;
+        border: 1px solid var(--font-color);
+        border-top-width: 0;
+        border-right-width: 0;
+        display: grid;
+        grid-template-columns: none;
+        grid-template-rows: 1fr 1fr;
+    }
+}
+
+@media screen and (min-width: 800px) {
+    /* General CSS */
+
+    header h1 {
+        font-size: 7em;
+    }
+}

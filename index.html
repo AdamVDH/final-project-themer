@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <title>Themer Site</title>
+    </head>
+    <body>
+        <header>
+            <h1>Themer Site</h1>
+        </header>
+        <aside id="themer" class="themerClosed">
+            <button onclick="changeTheme('darkTheme')">Dark</button>
+            <button onclick="changeTheme('lightTheme')">Light</button>
+            <button onclick="changeTheme('rainbowTheme')">Rainbow</button>
+            <button onclick="changeTheme('badTheme')">Bad</button>
+            <button class="alwaysButton" onclick="toggleThemeDrawer()">&#709;</button>
+        </aside>
+        <main>
+            <p>This is my final project for Web 103. This page showcases my "themer," as I call it. It's a theme changer, changing the CSS of this page by the press of a button. It's capable of more than I've showcased, and it's easily expandable!</p>
+            <p>Below is a "notecard." I thought to use it like an index card.</p>
+            <p>Further below, in the header "Heading With Badge," is a badge that says "New!" I stole that idea and the general design from Bootstrap.</p>
+            <div class="notecard">
+                <div class="notecardHeading">Rainbow Theme</div>
+                <div class="notecardContent">
+                    <p>The rainbow theme has unique code to run it, as well as to stop it running.</p>
+                </div>
+            </div>
+
+            <h2>Credits</h2>
+            <h3>Fonts</h3>
+            All fonts are from Google Fonts.
+            <ul>
+                <li><a href="https://fonts.google.com/specimen/Viaoda+Libre?query=viao&category=Display">Viaoda Libre</a></li>
+                <li><a href="https://fonts.google.com/specimen/Lato?query=lato">Lato</a></li>
+                <li><a href="https://fonts.google.com/specimen/Nabla?query=nabla">Nabla</a></li>
+            </ul>
+
+            <h2>Heading With Badge <span class="badge badgeNew">New!</span></h2>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum harum ullam dolorem similique repudiandae voluptas tempora accusantium, delectus soluta modi.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi amet consectetur, dolores obcaecati repellat atque quo aut, dignissimos eos, neque illo? Provident, ea quibusdam? Vero animi placeat ad at tempora incidunt saepe maiores quidem minima?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste odit aspernatur illum ex harum dolorum distinctio sed? Deserunt libero sequi nostrum dolore tempore adipisci animi veniam ex. Qui deleniti aspernatur commodi, eveniet minima velit? Impedit architecto a facere est at! Labore deleniti quibusdam ea tempore eveniet ipsum, amet nostrum molestias. Repellendus voluptatibus voluptas ad atque, esse, eos, consectetur cumque culpa obcaecati sapiente reiciendis provident beatae repudiandae voluptatum facilis laboriosam vitae deleniti doloremque iste? Vero laudantium provident voluptas deleniti ex minus.</p>
+        </main>
+        <footer>
+            Copyright &copy; Adam Van Der Hoeven 2022. All rights reserved.
+        </footer>
+
+        <script src="script.js"></script>
+    </body>
+</html>
